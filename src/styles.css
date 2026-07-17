@@ -1,0 +1,155 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-glow: var(--primary-glow);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 1rem;
+
+  /* Dark portfolio palette - orange on near-black */
+  --background: oklch(0.16 0.012 40);
+  --foreground: oklch(0.97 0.01 60);
+
+  --card: oklch(0.21 0.018 40);
+  --card-foreground: oklch(0.97 0.01 60);
+
+  --popover: oklch(0.21 0.018 40);
+  --popover-foreground: oklch(0.97 0.01 60);
+
+  --primary: oklch(0.72 0.19 45);
+  --primary-foreground: oklch(0.16 0.012 40);
+  --primary-glow: oklch(0.78 0.18 55);
+
+  --secondary: oklch(0.26 0.02 40);
+  --secondary-foreground: oklch(0.97 0.01 60);
+
+  --muted: oklch(0.24 0.018 40);
+  --muted-foreground: oklch(0.68 0.02 50);
+
+  --accent: oklch(0.72 0.19 45);
+  --accent-foreground: oklch(0.16 0.012 40);
+
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(0.97 0.01 60);
+
+  --border: oklch(0.3 0.02 40 / 60%);
+  --input: oklch(0.26 0.02 40);
+  --ring: oklch(0.72 0.19 45);
+
+  --gradient-primary: linear-gradient(135deg, oklch(0.72 0.19 45), oklch(0.66 0.21 35));
+  --gradient-hero: radial-gradient(ellipse at 70% 50%, oklch(0.45 0.18 45 / 35%), transparent 60%);
+  --gradient-glow: radial-gradient(circle at center, oklch(0.72 0.19 45 / 40%), transparent 70%);
+  --shadow-glow: 0 20px 60px -15px oklch(0.72 0.19 45 / 50%);
+  --shadow-card: 0 10px 40px -20px oklch(0 0 0 / 60%);
+  --grid-line: oklch(0.28 0.018 40 / 40%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  @keyframes soft-breathe {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.92;
+    }
+    50% {
+      transform: scale(1.04);
+      opacity: 1;
+    }
+  }
+
+  @keyframes gentle-float {
+    0%, 100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(0, -8px, 0);
+    }
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+  .bg-radial-glow {
+    background-image: var(--gradient-glow);
+  }
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .animate-soft-breathe {
+    animation: soft-breathe 9s ease-in-out infinite;
+    transform-origin: center;
+    will-change: transform, opacity;
+  }
+  .animate-gentle-float {
+    animation: gentle-float 8.5s ease-in-out infinite;
+    will-change: transform;
+  }
+}
