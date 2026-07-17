@@ -1,6 +1,6 @@
 {
     "buildCommand": "node ./scripts/build-static.mjs",
-    "outputDirectory": ".output/public",
+    "outputDirectory": ".output/public/client",
     "rewrites": [
         {
             "source": "/(.*)",
