@@ -16,7 +16,8 @@ export function Connect() {
 
         {/* Email Card */}
         <a
-          href="mailto:malithugc13@gmail.com"
+          href="mailto:malithniranditha@gmail.com
+"
           className="group mt-10 flex items-center gap-4 rounded-2xl border border-border bg-card/60 p-5 text-left backdrop-blur transition-all hover:border-primary/50"
         >
           <div className="grid size-12 place-items-center rounded-xl bg-primary/15 text-primary">
@@ -26,7 +27,8 @@ export function Connect() {
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Email
             </p>
-            <p className="font-semibold">malithugc13@gmail.com</p>
+            <p className="font-semibold">malithniranditha@gmail.com
+</p>
           </div>
           <ArrowRight className="size-5 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-primary" />
         </a>
@@ -95,7 +97,8 @@ export function Connect() {
 
         {/* Hire Me Button */}
         <a
-          href="mailto:malithugc13@gmail.com"
+          href="mailto:malithniranditha@gmail.com
+"
           className="mt-6 block rounded-2xl bg-gradient-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.02]"
         >
           Hire Me

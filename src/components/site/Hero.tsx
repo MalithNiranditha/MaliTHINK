@@ -53,7 +53,8 @@ export function Hero() {
             <div className="pointer-events-none absolute -left-6 -top-4 h-20 w-40 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,106,26,0.18)_0%,rgba(255,106,26,0.08)_36%,rgba(255,106,26,0)_74%)] blur-3xl opacity-80" />
 
             <a
-              href="mailto:malithugc13@gmail.com"
+              href="mailto:malithniranditha@gmail.com
+"
               className="relative z-20 pointer-events-auto rounded-full bg-gradient-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition-transform duration-150 ease-out hover:scale-105"
             >
               Hire me
