@@ -57,8 +57,8 @@ export function Navbar() {
           ))}
         </ul>
         <a
-          href="/Malith_Niranditha_Resume.pdf"
-          download="Malith_Niranditha_Resume.pdf"
+          href="/Malith_Niranditha_CV.pdf"
+          download="Malith_Niranditha_CV.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="relative z-20 pointer-events-auto inline-flex items-center gap-2 rounded-full bg-gradient-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-glow transition-transform duration-150 ease-out hover:scale-105"
